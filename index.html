@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07101f">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="AlgoTutorGen turns executable algorithm specifications into interactive browser tutors. Explore the contract-guided workflow and four runnable HTML demos.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AlgoTutorGen">
+  <meta property="og:description" content="Executable semantics. Interactive tutors. Explore the workflow and runnable demos.">
+  <title>AlgoTutorGen · Interactive Algorithm Tutors</title>
+  <link rel="icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./styles.css">
+  <script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduce-motion');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#main" aria-label="AlgoTutorGen home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>AlgoTutorGen</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#method">Method</a>
+        <a href="#artifacts">Live Demos</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-action" href="#artifacts">Explore artifacts <span aria-hidden="true">↘</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#method">Method</a>
+      <a href="#artifacts">Live Demos</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas id="trace-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid page-shell">
+        <div class="hero-copy" data-reveal>
+          <h1 class="hero-title" id="hero-title">Executable semantics.<br>Verifiable tutors.</h1>
+          <p class="hero-lede">Contract-guided synthesis turns executable algorithm specifications into trustworthy interactive browser tutors.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#method">Explore the method <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="#artifacts">Open runnable artifacts <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="orbit-halo" aria-hidden="true"></div>
+          <div class="contract-orbit" aria-label="Contract chain from an executable specification to a fixed Web Runtime">
+            <div class="orbit-path" aria-hidden="true">
+              <span class="trace-dot trace-dot-a"></span>
+              <span class="trace-dot trace-dot-b"></span>
+            </div>
+            <div class="orbit-node orbit-node-spec">
+              <span class="orbit-index">01</span>
+              <strong>Executable Spec</strong>
+              <small>LLM writes bounded program logic</small>
+            </div>
+            <span class="orbit-gate gate-a" aria-label="Result contract gate"></span>
+            <div class="orbit-node orbit-node-trace">
+              <span class="orbit-index">02</span>
+              <strong>SemanticTrace</strong>
+              <small>Sandbox materializes canonical state</small>
+            </div>
+            <span class="orbit-gate gate-b" aria-label="Trace contract gate"></span>
+            <div class="orbit-node orbit-node-scene">
+              <span class="orbit-index">03</span>
+              <strong>SceneGraph</strong>
+              <small>Validated projection, deterministic compile</small>
+            </div>
+            <span class="orbit-gate gate-c" aria-label="Scene contract gate"></span>
+            <div class="orbit-node orbit-node-runtime">
+              <span class="orbit-index">04</span>
+              <strong>Fixed Runtime</strong>
+              <small>Known browser behavior, isolated teaching</small>
+            </div>
+            <div class="design-card">
+              <span class="design-label">DESIGN GOAL</span>
+              <strong>Traceable</strong>
+              <small>each rendered state follows an explicit contract chain</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <dl class="feature-rail page-shell">
+        <div><dt>specification</dt><dd>Executable</dd></div>
+        <div><dt>state model</dt><dd>Canonical</dd></div>
+        <div><dt>delivery</dt><dd>Portable HTML</dd></div>
+      </dl>
+    </section>
+
+    <section id="method" class="section method-section" aria-labelledby="method-title">
+      <div class="page-shell">
+        <header class="section-heading method-heading" data-reveal>
+          <span class="section-number" aria-hidden="true">01</span>
+          <div>
+            <h2 id="method-title">Verifiability is not a promise.<br>It is an executable chain.</h2>
+            <p>Answers, traces, scenes, browser behavior, and tutoring state no longer compete inside one free-form HTML file. Each representation boundary has an executable gate, and each failure returns to a repairable semantic layer.</p>
+          </div>
+        </header>
+
+        <div class="pipeline-shell" data-reveal>
+          <div class="repair-loop" aria-hidden="true"><span>failure signal</span><i></i><b>repair spec</b></div>
+          <div class="pipeline-scroll" tabindex="0" aria-label="Scroll horizontally to inspect the complete method chain">
+            <div class="pipeline" aria-label="Method chain from a problem to interactive HTML">
+              <div class="pipe-node pipe-input"><span>INPUT</span><strong>Problem<br>+ Input</strong><small>question · oracle · optional code</small></div>
+              <button class="gate-button is-active" type="button" data-gate="result" aria-pressed="true" aria-label="Inspect the Result gate"><i></i><span>C<sub>S</sub></span></button>
+              <div class="pipe-node"><span>SPEC</span><strong>LLM executable<br>spec</strong><small>bounded solve + trace logic</small></div>
+              <button class="gate-button" type="button" data-gate="trace" aria-pressed="false" aria-label="Inspect the Trace gate"><i></i><span>C<sub>T</sub></span></button>
+              <div class="pipe-node pipe-cyan"><span>MATERIALIZE</span><strong>Sandbox +<br>SemanticTrace</strong><small>canonical algorithmic state</small></div>
+              <button class="gate-button" type="button" data-gate="process" aria-pressed="false" aria-label="Inspect the Process gate"><i></i><span>C<sub>P</sub></span></button>
+              <div class="pipe-node pipe-cyan"><span>PROJECT</span><strong>Validated<br>SceneGraph</strong><small>deterministic compiler</small></div>
+              <button class="gate-button" type="button" data-gate="scene" aria-pressed="false" aria-label="Inspect the Scene gate"><i></i><span>C<sub>G</sub></span></button>
+              <div class="pipe-node"><span>RUNTIME</span><strong>Fixed Web<br>Runtime</strong><small>known interaction behavior</small></div>
+              <button class="gate-button" type="button" data-gate="release" aria-pressed="false" aria-label="Inspect the Release gate"><i></i><span>C<sub>B</sub></span></button>
+              <div class="pipe-node pipe-output"><span>ARTIFACT</span><strong>Interactive<br>HTML</strong><small>self-contained browser tutor</small></div>
+            </div>
+          </div>
+
+          <div class="teaching-branch" aria-label="Read-only pedagogical-state branch">
+            <span class="branch-label">PEDAGOGICAL STATE</span>
+            <div class="branch-node"><small>READ ONLY</small><strong>Canonical facts</strong></div>
+            <i aria-hidden="true"></i>
+            <div class="branch-sanitizer"><span aria-hidden="true">◇</span><strong>Overlay sanitizer</strong></div>
+            <i aria-hidden="true"></i>
+            <div class="branch-node"><small>TEACHING</small><strong>Hint · feedback · explanation</strong></div>
+          </div>
+
+          <div class="gate-detail" id="gate-detail" aria-live="polite">
+            <span>C<sub>S</sub> · RESULT GATE</span>
+            <strong>Validate the answer before downstream materialization.</strong>
+            <p>Execute <code>solve</code>, normalize its output, and align it with the expected oracle. Failures remain at the specification layer instead of being wrapped in a polished page.</p>
+          </div>
+        </div>
+
+        <div class="principle-grid" data-reveal>
+          <article>
+            <span class="principle-code">SEPARATE</span>
+            <strong>One source of algorithmic state</strong>
+            <p>Answers, traces, scenes, and tutoring controls have distinct responsibilities and explicit interfaces.</p>
+          </article>
+          <article>
+            <span class="principle-code">VALIDATE</span>
+            <strong>Check each representation boundary</strong>
+            <p>Contract gates keep failures close to the layer that introduced them and make repair targets explicit.</p>
+          </article>
+          <article>
+            <span class="principle-code">RENDER</span>
+            <strong>Keep the browser runtime fixed</strong>
+            <p>Interactive behavior stays reusable while each algorithm contributes only structured, inspectable content.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="artifacts" class="section artifacts-section" aria-labelledby="artifacts-title">
+      <div class="page-shell">
+        <header class="section-heading artifacts-heading" data-reveal>
+          <span class="section-number" aria-hidden="true">02</span>
+          <div>
+            <h2 id="artifacts-title">Not screenshots: HTML you can<br>run, inspect, and answer.</h2>
+            <p>Each artifact enters the browser with the same traceable algorithm-state chain. Select an example, inspect its real screenshot, then open the self-contained HTML.</p>
+          </div>
+        </header>
+
+        <div class="artifact-stage" id="artifact-panel" role="tabpanel" aria-label="Selected runnable artifact" data-reveal>
+          <div class="browser-frame">
+            <div class="browser-chrome" aria-hidden="true">
+              <span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span>
+              <div class="browser-address">artifact://algotutorgen/verified</div>
+              <span class="browser-status">LIVE</span>
+            </div>
+            <div class="artifact-image-wrap">
+              <img id="artifact-image" src="./assets/binary-search.png" alt="Interactive binary-search tutor screenshot" loading="lazy">
+              <span class="image-scanline" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <aside class="artifact-inspector" aria-label="Selected artifact details">
+            <span class="artifact-index" id="artifact-index">01 / 04</span>
+            <h3 id="artifact-title">Binary Search</h3>
+            <p id="artifact-summary">Animate closed-interval pointer contraction in the fixed runtime and provide feedback at a prediction checkpoint.</p>
+            <dl>
+              <div><dt>family</dt><dd id="artifact-family">Search</dd></div>
+              <div><dt>frames</dt><dd id="artifact-frames">5</dd></div>
+              <div><dt>release gate</dt><dd class="pass">PASS</dd></div>
+              <div><dt>runtime</dt><dd>self-contained</dd></div>
+              <div><dt>pedagogical state</dt><dd>state-separated by design</dd></div>
+            </dl>
+            <a class="button button-outline-orange" id="artifact-link" href="./artifacts/binary-search.html" target="_blank" rel="noreferrer">Open runnable artifact <span aria-hidden="true">↗</span></a>
+          </aside>
+        </div>
+
+        <div class="artifact-rail" role="tablist" aria-label="Runnable algorithm artifacts" data-reveal>
+          <div class="artifact-tab is-active">
+            <button type="button" role="tab" data-artifact="binary-search" aria-selected="true" aria-controls="artifact-panel" tabindex="0"><span>01</span><img src="./assets/binary-search.png" alt="" aria-hidden="true"><strong>Binary Search</strong><small>Search</small></button>
+            <a href="./artifacts/binary-search.html" target="_blank" rel="noreferrer" aria-label="Open the Binary Search HTML directly">↗</a>
+          </div>
+          <div class="artifact-tab">
+            <button type="button" role="tab" data-artifact="dijkstra" aria-selected="false" aria-controls="artifact-panel" tabindex="-1"><span>02</span><img src="./assets/dijkstra-shortest-path.png" alt="" aria-hidden="true"><strong>Dijkstra Shortest Path</strong><small>Graph</small></button>
+            <a href="./artifacts/dijkstra-shortest-path.html" target="_blank" rel="noreferrer" aria-label="Open the Dijkstra Shortest Path HTML directly">↗</a>
+          </div>
+          <div class="artifact-tab">
+            <button type="button" role="tab" data-artifact="unique-paths" aria-selected="false" aria-controls="artifact-panel" tabindex="-1"><span>03</span><img src="./assets/unique-paths.png" alt="" aria-hidden="true"><strong>Unique Paths</strong><small>Dynamic Programming</small></button>
+            <a href="./artifacts/unique-paths.html" target="_blank" rel="noreferrer" aria-label="Open the Unique Paths HTML directly">↗</a>
+          </div>
+          <div class="artifact-tab">
+            <button type="button" role="tab" data-artifact="trie" aria-selected="false" aria-controls="artifact-panel" tabindex="-1"><span>04</span><img src="./assets/trie-prefix-match.png" alt="" aria-hidden="true"><strong>Trie Prefix Match</strong><small>String / Tree</small></button>
+            <a href="./artifacts/trie-prefix-match.html" target="_blank" rel="noreferrer" aria-label="Open the Trie Prefix Match HTML directly">↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-grid">
+      <a class="brand" href="#top" aria-label="Return to the top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>AlgoTutorGen</span></a>
+      <nav aria-label="Footer navigation"><a href="#method">Method</a><a href="#artifacts">Live Demos</a></nav>
+      <p>Built around explicit state contracts.</p>
+    </div>
+  </footer>
+
+  <noscript><p class="noscript-note">The method overview and demo links remain readable without JavaScript. Enable it to inspect gates and explore artifacts.</p></noscript>
+  <script defer src="./app.js"></script>
+</body>
+</html>
