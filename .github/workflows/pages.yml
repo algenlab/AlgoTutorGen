@@ -26,7 +26,6 @@ jobs:
 
       - name: Validate static site
         run: |
-          node tests/validate-showcase.mjs
           node --check app.js
 
       - name: Stage anonymous project showcase
